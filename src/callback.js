@@ -33,7 +33,7 @@ fetchData((result) => {
 const numbers = [1, 2, 3, 4, 5]
 // map takes a callback that transforms each element
 const squares = numbers.map((n) => n * n)
-console.log('Squares:', squares) // [1,4,9,16,25]
+console.log('Squares:', squares)
 
 /*
    Explanation:
@@ -74,15 +74,33 @@ sayHiThrice('Bob')
 // `message` (string) and `delay` (ms). It should use setTimeout to log
 // the message after the given delay.
 function delayedLog(message, delay) {
-    // TODO: implement
+    setTimeout(() => {
+        console.log(message)
+    }, delay)
 }
+
+delayedLog('Hi Joe Doe', 6000)
 
 // Task 2: Custom Filter
 // Write a function named `customFilter` that takes an array and a predicate callback.
 // It should return a new array containing only elements for which the predicate returns true.
 function customFilter(arr, predicate) {
-    // TODO: implement
+    const newArr = []
+    for (let i of arr) {
+        if (predicate(i) === true) {
+            newArr.push(i)
+        }
+    }
+
+    console.log(newArr)
+    return newArr
 }
+
+customFilter([1, 2, 3, 4, 5], (n) => {
+    return n > 2
+})[(1, 2, 3, 4, 5)].filter((n) => {
+    return n > 2
+})
 
 // Task 3: Once Wrapper
 // Implement a function named `once` that takes a function `fn` and returns

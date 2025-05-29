@@ -78,3 +78,18 @@ console.log(Boolean('hello')) // true
 //      // "Different value" otherwise
 //    }
 //    - Test with compareVals(1, "1"), compareVals(2, 2), compareVals(true, 0)
+
+const compareVals = (a,b) => {
+    let value
+    if(a === b) {
+       value = true
+    } else if(a == b) {
+         value = false
+    } else {
+         value = false
+    }
+
+    return console.log({ value })
+}
+
+compareVals(5,'2')
